@@ -14,6 +14,12 @@ void PrintValarray(valarray<T> va, string name)
     }
     cout<<endl;
 }
+
+void PrintSlice(slice slc,string name)
+{
+    cout<<name<<":"<<endl;
+    cout<<slc.start()<<" "<<slc.stride()<<" "<<slc.size()<<endl;
+}
 int main ()
 {
   std::valarray<int> foo (12);
@@ -30,6 +36,8 @@ int main ()
   PrintValarray<int>(foo,"foo");
   cout<<"---------"<<endl;
   PrintValarray<int>(bar,"bar");
+  cout<<"---------"<<endl;
+  PrintSlice(second,"second");
   cout<<"---------"<<endl;
   return 0;
 }
